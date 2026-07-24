@@ -80,7 +80,7 @@
 }
 
 .indicator-dot.active {
-  background-color: #f97316;
+  background-color: var(--color-accent-primary);
   width: 1.25rem;
   border-radius: 9999px;
 }

@@ -38,22 +38,34 @@ export const experiences: Experience[] = [
     title: 'Ingénieur fullstack',
     context: `Stage de fin d'études - Takima, 2026`,
     techStack: [
+      { name: 'Java 21', image: 'assets/skill_icons/java.svg', level: 'Avancé' },
+      { name: 'Spring Boot', image: 'assets/skill_icons/springboot.svg', level: 'Avancé' },
+      { name: 'PostgreSQL', image: 'assets/skill_icons/sql.svg', level: 'Maîtrise' },
+      { name: 'Docker', image: 'assets/skill_icons/docker.svg', level: 'Maîtrise' },
       { name: 'Angular', image: 'assets/skill_icons/angular.svg', level: 'Avancé' },
-      { name: 'Kafka', image: 'assets/skill_icons/kafka.svg', level: 'Intermédiaire' },
       { name: 'TypeScript', image: 'assets/skill_icons/typescript.svg', level: 'Maîtrise' },
+      { name: 'Gitlab CI/CD', image: 'assets/skill_icons/gitlab.svg', level: 'Avancé' },
+      { name: 'Kubernetes', image: 'assets/skill_icons/k8s.svg', level: 'Avancé' },
+      { name: 'Datadog', image: 'assets/skill_icons/datadog.svg', level: 'Intermédiaire' },
+      { name: 'Kafka', image: 'assets/skill_icons/kafka.svg', level: 'Intermédiaire' },
+      { name: 'OpenCode', image: 'assets/skill_icons/opencode.svg', level: 'Avancé' },
     ],
-    problem: `Visualiser en temps réel le flux de milliers de colis sans figer l'interface ni perdre de données lors des pics de trafic.`,
+    problem: `Durant mon stage, j'ai travaillé sur Dossier d'Expertise, un projet interne de mon ESN qui tourne en production.`,
     solution: [
-      `Architecture event-driven avec Kafka pour le streaming et Angular Signals pour le rendu réactif.`,
-      `Le dashboard diffuse 120 mises à jour/seconde avec moins de 16 ms de latence.`,
+      `Conception, implémentation et mise en production d’un micro-service d’anonymisation pour traitement de données personnelles par LLM`,
+      `Benchmark des modèles de NER français pour l’anonymisation des données (F1-score)`,
+      `Implémentation d’un RAG pour enrichir un moteur de recherche interne`,
+      `Conception et intégration d'un module IA de reformatage (structured outputs) automatique de CV, réduisant les traitements manuels du pôle commercial en produisant des documents directement exploitables`
     ],
   },
   {
-    title: 'Localisation acoustique 3D',
+    title: 'Ingénieur recherche',
     context: 'Stage de recherche — Inria, 2025',
     techStack: [
       { name: 'C++', image: 'assets/skill_icons/cpp.svg', level: 'Maîtrise' },
       { name: 'Arduino', image: 'assets/skill_icons/arduino.svg', level: 'Intermédiaire' },
+      { name: 'React', image: 'assets/skill_icons/react.svg', level: 'Avancé' },
+
     ],
     problem: 'Estimer la direction d\'une source sonore dans une pièce réverbérante à partir d\'un réseau de microphones bas-coût.',
     solution: [

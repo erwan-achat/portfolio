@@ -8,7 +8,8 @@
   --color-site-bg-dark: color-mix(in srgb, var(--color-site-bg) 90%, rgb(0, 0, 0)); ;
   --color-site-text: #ffffff;
 
-  --color-accent-primary: #3b418c;
+  --color-accent-primary: #f97316;
+  --color-accent-light: #ffe0bf;
   --color-accent-muted: #f6f3ec;
 
   --font-site-heading: 'Manrope', system-ui, -apple-system, sans-serif;
