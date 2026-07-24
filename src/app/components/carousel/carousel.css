@@ -1,5 +1,4 @@
 .carousel {
-  background-color: #18181b;
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
@@ -74,7 +73,7 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 9999px;
-  background-color: #52525b;
+  background-color: #494949d7;
   border: none;
   cursor: pointer;
   transition: background-color 300ms, width 300ms;

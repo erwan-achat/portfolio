@@ -4,41 +4,37 @@
 @plugin "daisyui";
 
 @theme {
-  /* Theme Colors */
-  --color-site-bg: rgb(80, 128, 186);
+  --color-site-bg: rgb(97, 128, 217);
+  --color-site-bg-dark: color-mix(in srgb, var(--color-site-bg) 90%, rgb(0, 0, 0)); ;
   --color-site-text: #ffffff;
 
-  /* Portfolio Accent Colors (Bonus modern palette) */
   --color-accent-primary: #3b418c;
   --color-accent-muted: #f6f3ec;
 
-  /* Typography */
   --font-site-heading: 'Manrope', system-ui, -apple-system, sans-serif;
   --font-site-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @layer base {
-  /* Core Reset & Layout */
-  html,
+  html {
+    background-color: var(--color-site-bg) !important;
+    scroll-behavior: smooth;
+  }
+
   body,
   app-root {
     background-color: transparent;
     color: var(--color-site-text);
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
-
   body {
     min-height: 100vh;
     font-family: var(--font-site-body);
-    line-height: 1.6; /* Increased slightly for better reading rhythm */
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Portfolio Typography Rules */
   h1,
   h2,
   h3,
@@ -48,12 +44,11 @@
     font-family: var(--font-site-heading);
     color: var(--color-site-text);
     font-weight: 700;
-    letter-spacing: -0.02em; /* Gives modern fonts a premium, tight look */
+    letter-spacing: -0.02em;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
   }
 
-  /* Custom typography scale for clear hierarchy */
   h1 {
     font-size: 2.25rem;
     line-height: 1.2;

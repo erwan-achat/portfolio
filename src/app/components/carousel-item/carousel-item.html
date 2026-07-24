@@ -17,6 +17,10 @@
 
   <div class="card-section">
     <h4 class="card-label">Solution</h4>
-    <p class="card-text">{{ item.solution }}</p>
+    <ul class="solution-list">
+      @for (point of item.solution; track $index) {
+        <li class="card-text">{{ point }}</li>
+      }
+    </ul>
   </div>
 </div>

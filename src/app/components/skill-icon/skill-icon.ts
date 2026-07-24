@@ -11,13 +11,4 @@ export class SkillIcon {
   @Input() name: string = '';
   @Input() image: string = '';
   @Input() level: SkillLevel = 'Intermédiaire';
-
-  get size(): number {
-    const sizes: Record<SkillLevel, number> = {
-      Intermédiaire: 64,
-      Maîtrise: 88,
-      Avancé: 112,
-    };
-    return sizes[this.level];
-  }
 }
