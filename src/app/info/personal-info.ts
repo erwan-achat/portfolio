@@ -19,7 +19,7 @@ naturel. Rigoureux et animé par la démarche scientifique, j’aime explorer le
 problématiques NLP en profondeur tout en gardant un ancrage solide en
 développement logiciel pour concrétiser mes idées.
   `,
-  title: 'AI Research Engineer',
+  title: 'AI Engineer',
   linkedIn: 'https://www.linkedin.com/in/erwan-achat-069311233/',
   github: 'https://github.com/r1ha/portfolio',
   location: 'Paris, France'
