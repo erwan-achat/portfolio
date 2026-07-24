@@ -1,59 +1,63 @@
-# Portfolio
+# Portfolio web
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.15.
+Portfolio personnel développé avec Angular 22 en standalone, Tailwind 4 et DaisyUI 5.
 
-## Development server
+Structuré en sections navigables avec animations avec des composants réutilisables et personnalisables avec vos informations personnelles, libre à vous de réutiliser ce projet comme template !
 
-To start a local development server, run:
-
-```bash
-ng serve
+```
+src/
+└── app/
+    ├── app.ts                      # Root component, route animations
+    ├── app.config.ts               # Injection tokens (personalInfo, experiences, …)
+    ├── app.routes.ts               # Routes lazy-loadées par section
+    ├── components/                 # Composants réutilisables
+    │   ├── carousel/               # Carousel horizontal auto-slide
+    │   ├── carousel-item/          # Carte d'expérience (stack, problème, solution)
+    │   ├── contact-form/           # Formulaire validation + localStorage
+    │   ├── footer/                 # Footer avec navigation + lien GitHub
+    │   ├── glass-card/             # Carte générique glassmorphism
+    │   ├── glass-icon/             # Icône glassmorphism pour about
+    │   ├── icon-set/               # Grille de liens (LinkedIn, GitHub, …)
+    │   ├── navbar/                 # Navbar glassmorphism avec squash au scroll
+    │   ├── personal-card/          # Carte de présentation
+    │   ├── skill-icon/             # Icône de technologie (logo + tooltip)
+    │   └── timeline/               # Timeline chronologique
+    ├── info/                        # Données + tokens d'injection
+    │   ├── experience-info.ts       # Expériences du carousel
+    │   ├── personal-info.ts         # Infos personnelles
+    │   ├── route-animations.ts      # Configuration animations de route
+    │   ├── section-info.ts          # Sections de navigation
+    │   └── timeline-info.ts         # Entrées de la timeline
+    └── sections/                    # Pages (lazy-loadées par route)
+        ├── about-section/           # Accueil : carte, bio, icon-set, timeline
+        ├── contact-section/         # Formulaire de contact
+        └── experiences-section/     # Carousel d'expériences
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Tech stack
 
-## Code scaffolding
+| Technologie    | Rôle |
+|----------------|------|
+| Angular 22     | Framework standalone, signals, lazy routes |
+| Tailwind 4     | Styles utilitaires |
+| DaisyUI 5      | Composants UI (tooltip, …) |
+| @angular/animations | Transitions entre sections |
+| Formspree      | Backend du formulaire de contact |
+| RxJS           | Scroll observable, auto-slide timer |
+| Vitest         | Tests unitaires |
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Démarrer
 
 ```bash
-ng build
+npm install
+ng serve        # → http://localhost:4200
+ng build        # → dist/
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Personnaliser les données
 
-## Running unit tests
+Modifie les fichiers dans `src/app/info/` :
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- `personal-info.ts` — nom, bio, liens, etc.
+- `timeline-info.ts` — entrées de la timeline
+- `experience-info.ts` — expériences du carousel
