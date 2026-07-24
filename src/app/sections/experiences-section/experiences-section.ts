@@ -1,43 +1,13 @@
-import { Component } from '@angular/core';
-import { SkillIcon, SkillLevel } from '../../components/skill-icon/skill-icon';
+import { Component, inject } from '@angular/core';
+import { EXPERIENCES, Experience } from '../../info/experience-info';
+import { Carousel } from '../../components/carousel/carousel';
 
 @Component({
   selector: 'app-experiences-section',
-  imports: [SkillIcon],
+  imports: [Carousel],
   templateUrl: './experiences-section.html',
   styleUrl: './experiences-section.css',
 })
 export class ExperiencesSection {
-protected readonly experiences = [
-    {
-      period: '2024 - Aujourd\'hui',
-      title: 'Développeur frontend',
-      company: 'Portfolio personnel',
-      description:
-        'Mise en place d\'une page portfolio orientée sections, avec navigation router et structure maintenable.',
-    },
-    {
-      period: '2022 - 2024',
-      title: 'Conception d\'interfaces',
-      company: 'Projets web',
-      description:
-        'Création de pages produits, de landing pages et de prototypes à forte contrainte de lisibilité.',
-    },
-  ];
-
-  protected readonly skills: { name: string; image: string; level: SkillLevel }[] = [
-    { name: 'Angular',    image: 'assets/skill_icons/angular.svg',    level: 'Avancé' },
-    { name: 'React',      image: 'assets/skill_icons/react.svg',      level: 'Maîtrise' },
-    { name: 'Python',     image: 'assets/skill_icons/python.svg',     level: 'Avancé' },
-    { name: 'TypeScript', image: 'assets/skill_icons/typescript.svg', level: 'Maîtrise' },
-    { name: 'Java 21',       image: 'assets/skill_icons/java.svg',       level: 'Avancé' },
-    { name: 'C++',        image: 'assets/skill_icons/cpp.svg',        level: 'Maîtrise' },
-    { name: 'Kafka',      image: 'assets/skill_icons/kafka.svg',      level: 'Intermédiaire' },
-    { name: 'Kubernetes', image: 'assets/skill_icons/k8s.svg',        level: 'Maîtrise' },
-    { name: 'Temporal',   image: 'assets/skill_icons/temporal.svg',   level: 'Intermédiaire' },
-    { name: 'PostgreSQL',        image: 'assets/skill_icons/sql.svg',        level: 'Maîtrise' },
-    { name: 'GitLab CI/CD', image: 'assets/skill_icons/gitlab.svg',   level: 'Maîtrise' },
-    { name: 'Arduino',    image: 'assets/skill_icons/arduino.svg',    level: 'Intermédiaire' },
-    { name: 'OpenCode',   image: 'assets/skill_icons/opencode.svg',   level: 'Maîtrise' },
-  ];
+  protected readonly experiences: Experience[] = inject(EXPERIENCES);
 }

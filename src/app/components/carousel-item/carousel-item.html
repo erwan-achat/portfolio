@@ -1,0 +1,22 @@
+<div class="experience-card">
+  <div class="card-header">
+    <h3 class="card-title">{{ item.title }}</h3>
+    <p class="card-context">{{ item.context }}</p>
+  </div>
+
+  <div class="tech-stack">
+    @for (skill of item.techStack; track skill.name) {
+      <app-skill-icon [name]="skill.name" [image]="skill.image" [level]="skill.level" />
+    }
+  </div>
+
+  <div class="card-section">
+    <h4 class="card-label">Problématique</h4>
+    <p class="card-text">{{ item.problem }}</p>
+  </div>
+
+  <div class="card-section">
+    <h4 class="card-label">Solution</h4>
+    <p class="card-text">{{ item.solution }}</p>
+  </div>
+</div>

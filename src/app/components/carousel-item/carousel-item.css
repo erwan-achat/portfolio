@@ -1,0 +1,80 @@
+.experience-card {
+  margin: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: #27272a;
+  border: 1px solid #3f3f46;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fafafa;
+}
+
+.card-context {
+  font-size: 0.875rem;
+  color: #a1a1aa;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.card-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #f97316;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #d4d4d8;
+}
+
+@media (max-width: 640px) {
+  .experience-card {
+    margin: 0.75rem;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.125rem;
+  }
+
+  .card-context,
+  .card-text {
+    font-size: 0.8125rem;
+  }
+
+  .card-label {
+    font-size: 0.6875rem;
+  }
+
+  .tech-stack ::ng-deep .skill-icon-img {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
