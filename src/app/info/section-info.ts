@@ -6,7 +6,7 @@ export interface NavSection {
 }
 
 export const navSections: NavSection[] = [
-  { label: 'À propos', path: '/home' },
+  { label: 'Profil', path: '/home' },
   { label: 'Expérience', path: '/experiences' },
   { label: 'Contact', path: '/contact' },
 ];

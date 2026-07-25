@@ -14,6 +14,8 @@ export interface Experience {
   techStack: SkillItem[];
   problem: string;
   solution: string[];
+  image?: string;
+  link?: { label: string; url: string };
 }
 
 export const experiences: Experience[] = [
@@ -24,16 +26,17 @@ export const experiences: Experience[] = [
       { name: 'Python', image: 'assets/skill_icons/python.svg', level: 'Avancé' },
       { name: 'PyTorch', image: 'assets/skill_icons/pytorch.svg', level: 'Maîtrise' },
     ],
-    problem: `IA multimodale : aligner un encodeur de texte BERT avec VAE image entraînés sur des données différentes, avec des espaces latents de dimension différentes.`,
+    image: 'assets/pictures/kaggle_challenge.png',
+    problem: `"Model stitching" pour IA multimodale  : Comment aligner un encodeur de texte (BERT) avec un encodeur image (VAE) entraînés sur des données différentes, avec des représentations différentes dans des espaces latents de dimension différentes ?`,
     solution: [
-     `Conception d'un module de projection MLP couplé à une loss contrastive pour aligner les embeddings vision et texte dans un espace sémantique commun.`,
-     `Nous nous sommes appuyés sur l'état de l'art de l'alignement multimodal pour guider nos choix d'architecture.
+      `Conception d'un module de projection MLP couplé à une loss contrastive pour aligner les embeddings vision et texte dans un espace sémantique commun.`,
+      `Nous nous sommes appuyés sur l'état de l'art de l'alignement multimodal pour guider nos choix d'architecture.
      Nous avons notamment fait le choix d'augmenter la dimension des couches côté texte pour mieux capturer la sémantique, comme suggéré par les travaux récents de la littérature.`,
-     `Mise en place d'une pipeline d'exploration d'hyperparamètres sur GPU pour optimiser l'entraînement.`,
-     `Insertion de bruit gaussien lors de l'entraînement pour améliorer la robustesse du modèle.`,
-     `Résultat : notre modèle a atteint un score de 0.89 sur le leaderboard, se classant ainsi dans le top 10% des participants.`
-    ]
-    },
+      `Mise en place d'une pipeline d'exploration d'hyperparamètres sur GPU pour optimiser l'entraînement.`,
+      `Insertion de bruit gaussien lors de l'entraînement pour améliorer la robustesse du modèle.`,
+      `Résultat : notre modèle a atteint un score de 0.89 sur le leaderboard, se classant ainsi dans le top 10% des participants.`,
+    ],
+  },
   {
     title: 'Ingénieur fullstack',
     context: `Stage de fin d'études - Takima, 2026`,
@@ -50,44 +53,35 @@ export const experiences: Experience[] = [
       { name: 'Kafka', image: 'assets/skill_icons/kafka.svg', level: 'Intermédiaire' },
       { name: 'OpenCode', image: 'assets/skill_icons/opencode.svg', level: 'Avancé' },
     ],
-    problem: `Durant mon stage, j'ai travaillé sur Dossier d'Expertise, un projet interne de mon ESN qui tourne en production.`,
+    problem: `Durant 6 mois, j'ai travaillé en équipe sur Dossier d'Expertise, une application d'édition de CV qui tourne en production et permet aux commerciaux de Takima de répondre aux appels avec des profils de consultants.
+    L'objectif était d'optimiser la gestion des profils des consultants pour fluidifier le staffing interne, tout en automatisant les tâches chronophages (reformatage, recherche) à l'aide de traitement par LLM.`,
     solution: [
       `Conception, implémentation et mise en production d’un micro-service d’anonymisation pour traitement de données personnelles par LLM`,
       `Benchmark des modèles de NER français pour l’anonymisation des données (F1-score)`,
       `Implémentation d’un RAG pour enrichir un moteur de recherche interne`,
-      `Conception et intégration d'un module IA de reformatage (structured outputs) automatique de CV, réduisant les traitements manuels du pôle commercial en produisant des documents directement exploitables`
+      `Conception et intégration d'un module IA de reformatage (structured outputs) automatique de CV, réduisant les traitements manuels du pôle commercial en produisant des documents directement exploitables`,
+      `Développement et déploiement d'un CronJob Kubernetes pour automatiser les notifications de mise à jour des dossiers aux consultants, facilitant ainsi les processus de staffing interne`,
     ],
   },
   {
     title: 'Ingénieur recherche',
-    context: 'Stage de recherche — Inria, 2025',
+    context: 'Stage de recherche en visualisation de données- Inria, 2025',
     techStack: [
       { name: 'C++', image: 'assets/skill_icons/cpp.svg', level: 'Maîtrise' },
       { name: 'Arduino', image: 'assets/skill_icons/arduino.svg', level: 'Intermédiaire' },
-      { name: 'React', image: 'assets/skill_icons/react.svg', level: 'Avancé' },
-
+      { name: 'React Vite', image: 'assets/skill_icons/react.svg', level: 'Avancé' },
+      { name: 'Blender', image: 'assets/skill_icons/blender.svg', level: 'Maîtrise' },
     ],
-    problem: 'Estimer la direction d\'une source sonore dans une pièce réverbérante à partir d\'un réseau de microphones bas-coût.',
+    problem: `Récupérer et visualiser le niveau sonore et la direction d'incidence d'une source sonore sur un écran non-planaire.`,
     solution: [
-      `Implémentation d\'un algorithme TDoA sur STM32 pour le calcul de différences de temps d\'arrivée.`,
-      `Filtre de Kalman pour lisser les estimations angulaires en environnement réverbérant.`,
-      `Précision angulaire moyenne de 4.2° dans un rayon de 5 mètres.`,
-    ]
-  },
-  {
-    title: 'Plateforme de déploiement ML',
-    context: 'Projet personnel — 2025-2026',
-    techStack: [
-      { name: 'Kubernetes', image: 'assets/skill_icons/k8s.svg', level: 'Maîtrise' },
-      { name: 'PostgreSQL', image: 'assets/skill_icons/sql.svg', level: 'Maîtrise' },
-      { name: 'Python', image: 'assets/skill_icons/python.svg', level: 'Avancé' },
+      `Traitement du signal (FFT) pour calculer le niveau sonore à partir de microphones
+analogiques à moindre coût.`,
+      `Conception d’un algorithme de TDoA pour estimer la direction d’incidence des sons et calcul des incertitudes.`,
+      `Développement de visualisations des données transmises en temps réel via WebSocket.`,
+      `Simulation 3D des visualisations avec React Three Fiber et Blender sur un écran cylindrique virtuel dans un setting réaliste.`,
+      `Communication en équipe exclusivement en anglais dans un setting international`,
     ],
-    problem: 'Industrialiser le déploiement de modèles ML sans escalade humaine entre l\'équipe data et l\'équipe infra.',
-    solution: [
-      `Helm chart paramétrable exposant une API FastAPI avec versioning automatique des modèles.`,
-      `Scaling horizontal via HPA et monitoring Prometheus pour une observabilité complète.`,
-      `Le temps de mise en production est passé de 2 jours à 20 minutes.`,
-    ],
+    link: { label: 'Lettre de recommandation', url: 'assets/pdfs/reference_letter_inria.pdf' },
   },
 ];
 

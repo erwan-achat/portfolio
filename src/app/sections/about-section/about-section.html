@@ -8,13 +8,13 @@
     </p>
   </div>
 
-  <div class="flex items-center gap-3 rounded-xl bg-gray-100 px-5 py-1 text-sm shadow-lg w-fit">
-    <img src="assets/skill_icons/toeic.svg" alt="TOEIC" class="w-16 h-16" />
-    <span class="text-neutral-900 font-bold text-lg">{{ personalInfo.toeicScore }}</span>
+  <div class="flex items-center gap-3 rounded-xl bg-zinc-900 px-5 py-1 text-sm shadow-lg w-fit">
+    <img src="assets/icons/toeic.svg" alt="TOEIC" class="w-16 h-16" />
+    <span class="font-light text-lg text-accent-light">{{ personalInfo.toeicScore }}</span>
     <a
       [href]="personalInfo.toeicLink"
       target="_blank"
-      class="underline underline-offset-2 text-neutral-500 hover:text-orange-500 transition-colors"
+      class="underline underline-offset-2 text-white/70 hover:text-accent-primary transition-colors"
     >
       Voir le certificat
     </a>

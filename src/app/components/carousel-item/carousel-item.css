@@ -58,6 +58,19 @@
   gap: 0.25rem;
 }
 
+.card-link {
+  font-size: 0.8125rem;
+  color: #a1a1aa;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  width: fit-content;
+  transition: color 200ms;
+}
+
+.card-link:hover {
+  color: var(--color-accent-primary);
+}
+
 @media (max-width: 640px) {
   .card-text {
     font-size: 0.8125rem;
@@ -82,6 +95,10 @@
 
   .card-label {
     font-size: 0.6875rem;
+  }
+
+  .card-link {
+    font-size: 0.75rem;
   }
 
   .tech-stack ::ng-deep .skill-icon-img {

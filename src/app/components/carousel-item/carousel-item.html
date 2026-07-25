@@ -4,6 +4,10 @@
     <p class="card-context">{{ item.context }}</p>
   </div>
 
+  @if (item.image) {
+    <img [src]="linkUrl(item.image)" alt="" loading="lazy" class="w-full rounded-sm" />
+  }
+
   <div class="tech-stack">
     @for (skill of item.techStack; track skill.name) {
       <app-skill-icon [name]="skill.name" [image]="skill.image" [level]="skill.level" />
@@ -23,4 +27,8 @@
       }
     </ul>
   </div>
+
+  @if (item.link) {
+    <a [href]="linkUrl(item.link.url)" target="_blank" class="card-link">{{ item.link.label }}</a>
+  }
 </div>

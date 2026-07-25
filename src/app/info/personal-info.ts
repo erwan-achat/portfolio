@@ -15,11 +15,9 @@ export interface PersonalInfo {
 export const personalInfo: PersonalInfo = {
   firstName: 'Erwan',
   lastName: 'Achat',
-  bio: `Ingénieur en informatique formé à l’Université Paris-Saclay, passionné
-par la recherche en apprentissage automatique et en traitement du langage
-naturel. Rigoureux et animé par la démarche scientifique, j’aime explorer les
-problématiques NLP en profondeur tout en gardant un ancrage solide en
-développement logiciel pour concrétiser mes idées.
+  bio: `Ingénieur en informatique formé à l’Université Paris-Saclay, je suis avant tout passionné
+par l'IA et le développement logiciel. Rigoureux, créatif et curieux,
+j'aime relever les défis techniques et donner vie aux idées innovantes, que ce soit dans mon quotidien ou dans le cadre professionnel.
   `,
   title: 'AI Engineer',
   linkedIn: 'https://www.linkedin.com/in/erwan-achat-069311233/',
