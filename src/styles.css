@@ -1,5 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
 @plugin "daisyui";
 
@@ -71,6 +69,6 @@
   p {
     font-family: var(--font-site-body);
     margin-bottom: 1.25rem;
-    opacity: 0.7; /* Slight opacity on body text looks softer and more modern than pure dark */
+    opacity: 0.7;
   }
 }

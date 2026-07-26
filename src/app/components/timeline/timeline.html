@@ -26,15 +26,18 @@
         [class.md:mb-10]="i % 2 !== 0"
       >
         <time class="font-mono italic">{{ section.year }}</time>
+        
         @if (section.logo) {
-          <img
-            [ngSrc]="section.logo"
-            width="200"
-            height="200"
-            [alt]="section.logoAlt ?? ''"
-            [class]="section.logoClass ?? 'w-1/2'"
-          />
+            <img
+              [ngSrc]="section.logo"
+              width="200"
+              height="100"
+              [alt]="section.logoAlt ?? ''"
+              class="block mt-2 mb-4"
+              [class.md:ms-auto]="i % 2 === 0"
+            />
         }
+        
         <div class="text-lg font-black whitespace-pre-line">{{ section.title }}</div>
         <p class="whitespace-pre-line">{{ section.summary }}</p>
       </div>

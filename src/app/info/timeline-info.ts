@@ -16,7 +16,6 @@ export const timelineSections: TimelineSection[] = [
     summary: 'Polytech Paris-Saclay',
     logo: 'assets/organizations/polytech_white.svg',
     logoAlt: `Polytech Paris-Saclay`,
-    logoClass: 'w-1/2',
   },
   {
     year: '2026',
@@ -30,7 +29,6 @@ export const timelineSections: TimelineSection[] = [
     `,
     logo: 'assets/organizations/takima_white.svg',
     logoAlt: 'Takima',
-    logoClass: 'w-1/3 p-5',
   },
   {
     year: '2025',
@@ -42,7 +40,6 @@ export const timelineSections: TimelineSection[] = [
     J'ai suivi et validé les enseignements suivants : Advanced Machine Learning, Quantum Computing, Biometric Systems, Automatic Verification of Intelligent Systems (Reinforcement Learning), Statistics`,
     logo: 'assets/organizations/sapienza_white.svg',
     logoAlt: 'Sapienza Università di Roma',
-    logoClass: 'w-1/2 p-5',
   },
   {
     year: '2025',
@@ -53,7 +50,6 @@ export const timelineSections: TimelineSection[] = [
     `,
     logo: 'assets/organizations/inria_white.svg',
     logoAlt: 'Inria',
-    logoClass: 'w-1/3 p-5',
   }
 ];
 
