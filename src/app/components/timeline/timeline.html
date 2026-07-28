@@ -19,11 +19,14 @@
         </svg>
       </div>
       <div
+        class="timeline-content"
         [class.timeline-start]="i % 2 === 0"
         [class.timeline-end]="i % 2 !== 0"
         [class.mb-10]="i % 2 === 0"
         [class.md:text-end]="i % 2 === 0"
         [class.md:mb-10]="i % 2 !== 0"
+        appScrollIn
+        [style.transition-delay]="i * 80 + 'ms'"
       >
         <time class="font-mono italic">{{ section.year }}</time>
         
