@@ -3,7 +3,6 @@
 
 @theme {
   --color-site-bg: rgb(97, 128, 217);
-  --color-site-bg-dark: color-mix(in srgb, var(--color-site-bg) 90%, rgb(0, 0, 0)); ;
   --color-site-text: #ffffff;
 
   --color-accent-primary: #f97316;
