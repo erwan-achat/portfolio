@@ -52,3 +52,6 @@ Use these global skills when appropriate:
 
 - git-worktree
 - impeccable
+- apple-design — Apple-inspired UI polish and fluid motion (styling)
+- design-taste-frontend — heavy skill, only load when doing visual/UX design work
+- high-end-visual-design — animation and motion design
