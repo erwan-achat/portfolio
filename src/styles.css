@@ -3,7 +3,7 @@
 
 @theme {
   --color-site-bg: rgb(97, 128, 217);
-  --color-site-bg-dark: color-mix(in srgb, var(--color-site-bg) 70%, black);
+  --color-site-bg-dark: color-mix(in srgb, var(--color-site-bg) 70%, blue);
   --color-site-text: #ffffff;
 
   --color-accent-primary: #f97316;
