@@ -6,6 +6,14 @@ Project intent, architecture and tech stack described in README.md
 
 ## Development Guidelines
 
+### Workflow (important)
+
+1. Always load git-worktree skill when a new task is received to decide how to work (branch, worktree)
+2. Create a short implementation plan before coding
+3. Implement following project conventions and best practices
+4. Commit the changes following conventional commits
+
+
 ### Angular
 
 Always use Angular CLI generators when a new component needs to be created.
@@ -38,17 +46,9 @@ This approach should especially be respected when a color has a semantic purpose
 * Take care of accessibility and responsiveness while designing UI.
 * Reuse code patterns (global styles, components, data from src/app/info) before introducing new ones.
 
----
-
-## Git
-
-For independent features or bug fixes, use the Git Worktree skill.
-
----
-
 ## Relevant Skills
 
-Use these global skills when appropriate:
+Use these skills when appropriate:
 
 - git-worktree
 - impeccable
