@@ -20,25 +20,7 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: 'Challenge Kaggle en équipe : alignement vision-texte',
-    context: 'Advanced Machine Learning, Sapienza Università di Roma - 2025',
-    techStack: [
-      { name: 'Python', image: 'assets/skill_icons/python.svg', level: 'Avancé' },
-      { name: 'PyTorch', image: 'assets/skill_icons/pytorch.svg', level: 'Maîtrise' },
-    ],
-    image: 'assets/pictures/kaggle_challenge.png',
-    problem: `"Model stitching" pour IA multimodale  : Comment aligner un encodeur de texte (BERT) avec un encodeur image (VAE) entraînés sur des données différentes, avec des représentations différentes dans des espaces latents de dimension différentes ?`,
-    solution: [
-      `Conception d'un module de projection MLP couplé à une loss contrastive pour aligner les embeddings vision et texte dans un espace sémantique commun.`,
-      `Nous nous sommes appuyés sur l'état de l'art de l'alignement multimodal pour guider nos choix d'architecture.
-     Nous avons notamment fait le choix d'augmenter la dimension des couches côté texte pour mieux capturer la sémantique, comme suggéré par les travaux récents de la littérature.`,
-      `Mise en place d'une pipeline d'exploration d'hyperparamètres sur GPU pour optimiser l'entraînement.`,
-      `Insertion de bruit gaussien lors de l'entraînement pour améliorer la robustesse du modèle.`,
-      `Résultat : notre modèle a atteint un score de 0.89 sur le leaderboard, se classant ainsi dans le top 10% des participants.`,
-    ],
-  },
-  {
-    title: 'Ingénieur fullstack',
+    title: 'Ingénieur fullstack (intégration IA)',
     context: `Stage de fin d'études - Takima, 2026`,
     techStack: [
       { name: 'Java 21', image: 'assets/skill_icons/java.svg', level: 'Avancé' },
@@ -61,6 +43,45 @@ export const experiences: Experience[] = [
       `Implémentation d’un RAG pour enrichir un moteur de recherche interne`,
       `Conception et intégration d'un module IA de reformatage (structured outputs) automatique de CV, réduisant les traitements manuels du pôle commercial en produisant des documents directement exploitables`,
       `Développement et déploiement d'un CronJob Kubernetes pour automatiser les notifications de mise à jour des dossiers aux consultants, facilitant ainsi les processus de staffing interne`,
+    ],
+  },
+  {
+    title: 'Challenge Kaggle en équipe : alignement vision-texte',
+    context: 'Advanced Machine Learning, Sapienza Università di Roma - 2025',
+    techStack: [
+      { name: 'Python', image: 'assets/skill_icons/python.svg', level: 'Avancé' },
+      { name: 'PyTorch', image: 'assets/skill_icons/pytorch.svg', level: 'Maîtrise' },
+    ],
+    image: 'assets/pictures/kaggle_challenge.png',
+    problem: `"Model stitching" pour IA multimodale  : Comment aligner un encodeur de texte (BERT) avec un encodeur image (VAE) entraînés sur des données différentes, avec des représentations différentes dans des espaces latents de dimension différentes ?`,
+    solution: [
+      `Conception d'un module de projection MLP couplé à une loss contrastive pour aligner les embeddings vision et texte dans un espace sémantique commun.`,
+      `Nous nous sommes appuyés sur l'état de l'art de l'alignement multimodal pour guider nos choix d'architecture.
+     Nous avons notamment fait le choix d'augmenter la dimension des couches côté texte pour mieux capturer la sémantique, comme suggéré par les travaux récents de la littérature.`,
+      `Mise en place d'une pipeline d'exploration d'hyperparamètres sur GPU pour optimiser l'entraînement.`,
+      `Insertion de bruit gaussien lors de l'entraînement pour améliorer la robustesse du modèle.`,
+      `Résultat : notre modèle a atteint un score de 0.89 sur le leaderboard, se classant ainsi dans le top 10% des participants.`,
+    ],
+  },
+  {
+    title: 'FaceGuard : un système biométrique de reconnaissance faciale',
+    context: 'Biometric Systems, Sapienza Università di Roma - 2025',
+    techStack: [
+      { name: 'Python', image: 'assets/skill_icons/python.svg', level: 'Avancé' },
+      { name: 'PyTorch', image: 'assets/skill_icons/pytorch.svg', level: 'Maîtrise' },
+      { name: 'FastAPI', image: 'assets/skill_icons/fastapi.svg', level: 'Intermédiaire' },
+      { name: 'PostgreSQL', image: 'assets/skill_icons/sql.svg', level: 'Maîtrise' },
+      { name: 'JWT', image: 'assets/skill_icons/jwt.svg', level: 'Maîtrise' },
+      { name: 'Gitlab CI/CD', image: 'assets/skill_icons/gitlab.svg', level: 'Avancé' },
+
+
+    ],
+    problem: `Concevoir un système biométrique de reconnaissance faciale sécurisé permettant l'enrôlement et l'authentification d'utilisateurs à partir d'une unique photographie, tout en résistant aux tentatives de fraude (presentation attacks). Le système devait également pouvoir être intégré comme service d'authentification dans une application via une API sécurisée.`,
+    solution: [
+      `Implémentation d'un système de reconnaissance faciale one-shot : lors de l'enrôlement, une photographie est transformée en embedding puis stockée dans une base biométrique pour les authentifications futures.`,
+      `Développement de plusieurs mécanismes de détection de vivacité (liveness detection) combinant approches algorithmiques et modèles de Machine Learning afin de détecter les attaques par photo, écran ou vidéo.`,
+      `Évaluation expérimentale du système à l'aide des métriques de référence (FAR, FRR, EER) afin de sélectionner un seuil de décision garantissant le meilleur compromis entre sécurité et expérience utilisateur.`,
+      `Conception d'une API sécurisée par JWT permettant d'intégrer le moteur biométrique dans une application et de gérer l'authentification ainsi que l'autorisation basée sur les rôles des utilisateurs.`,
     ],
   },
   {
