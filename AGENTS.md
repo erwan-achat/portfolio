@@ -12,7 +12,7 @@ Project intent, architecture and tech stack described in README.md
 2. Create a short implementation plan before coding
 3. Implement following project conventions and best practices
 4. Commit the changes following conventional commits
-
+5. Always ask user to review before merging
 
 ### Angular
 
