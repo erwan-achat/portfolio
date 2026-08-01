@@ -4,15 +4,5 @@
           d="M50 3 C56 2 63 4 70 8 C77 12 83 18 88 26 C93 34 96 44 94 54 C92 64 86 74 78 82 C70 90 60 95 50 97 C40 99 30 96 22 90 C14 84 8 76 4 66 C0 56 2 44 6 34 C10 24 18 16 28 10 C38 4 45 3 50 3 Z" />
   </svg>
 
-  <div class="text-container">
-    <span class="welcome-line" aria-label="Bienvenue">
-      @for (letter of letters; track $index) {
-        <span class="letter" [style.animation-delay]="(0.55 + $index * 0.06) + 's'">{{ letter }}</span>
-      }
-    </span>
-    <svg class="underline-svg" viewBox="0 0 360 24" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-      <path class="underline-path" d="M10 15 C80 -2 160 32 240 15 C280 7 320 20 350 15"
-            fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" />
-    </svg>
-  </div>
+  <img class="hello-img" src="assets/animated/hello.svg" alt="Hello" />
 </div>

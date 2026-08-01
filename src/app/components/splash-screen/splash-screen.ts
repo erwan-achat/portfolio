@@ -9,8 +9,6 @@ import { Component, output } from '@angular/core';
 export class SplashScreen {
   done = output<void>();
 
-  letters = 'Bienvenue'.split('');
-
   private ended = false;
 
   onDone(event: AnimationEvent) {
