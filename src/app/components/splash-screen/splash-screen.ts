@@ -11,10 +11,18 @@ export class SplashScreen {
 
   private ended = false;
 
+  constructor() {
+    // Fallback in case CSS animations are disabled (e.g. prefers-reduced-motion).
+    setTimeout(() => this.finish(), 5000);
+  }
+
   onDone(event: AnimationEvent) {
+    if (event.animationName !== 'overlay-out') return;
+    this.finish();
+  }
+
+  private finish() {
     if (this.ended) return;
-    const target = event.target as HTMLElement;
-    if (!target.classList.contains('splash-overlay')) return;
     this.ended = true;
     this.done.emit();
   }

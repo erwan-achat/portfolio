@@ -1,27 +1,24 @@
-.splash-overlay {
+.splash-fade {
   position: fixed;
   inset: 0;
   z-index: 9999;
+  pointer-events: auto;
+  animation:
+    overlay-in 0.6s ease-out forwards,
+    overlay-out 0.8s ease-in 4s forwards;
+}
+
+/* Blur lives on a child so the opacity fade never animates the blurred element
+   (avoiding Safari compositing glitches). */
+.splash-overlay {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  pointer-events: none;
-  animation: overlay-out 0.7s cubic-bezier(0.65, 0, 0.35, 1) 4s forwards;
-}
-
-.blob-svg {
-  position: absolute;
-  inset: -50%;
-  width: 200%;
-  height: 200%;
-  animation: blob-in 0.9s cubic-bezier(0.15, 0.75, 0.35, 1.05) forwards;
-}
-
-.blob-path {
-  fill: var(--color-site-bg);
-  transform-origin: center;
-  animation: blob-out 0.7s cubic-bezier(0.65, 0, 0.35, 1) 4s forwards;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 }
 
 .hello-img {
@@ -30,35 +27,10 @@
   width: min(70vw, 420px);
   height: auto;
   opacity: 0;
-  animation: hello-in 0.4s ease-out 0.6s forwards;
+  animation: hello-in 0.4s ease-out 0.7s forwards;
 }
 
-@keyframes blob-in {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.15);
-    opacity: 1;
-  }
-}
-
-@keyframes blob-out {
-  0% {
-    transform: scale(1.15);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.15) translateY(-120%) rotate(8deg);
-    opacity: 0;
-  }
-}
-
-@keyframes hello-in {
+@keyframes overlay-in {
   0% {
     opacity: 0;
   }
@@ -70,10 +42,17 @@
 @keyframes overlay-out {
   0% {
     opacity: 1;
-    transform: translateY(0);
   }
   100% {
     opacity: 0;
-    transform: translateY(-100%);
+  }
+}
+
+@keyframes hello-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

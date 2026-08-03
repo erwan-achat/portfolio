@@ -1,8 +1,5 @@
-<div class="splash-overlay" (animationend)="onDone($event)">
-  <svg class="blob-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <path class="blob-path"
-          d="M50 3 C56 2 63 4 70 8 C77 12 83 18 88 26 C93 34 96 44 94 54 C92 64 86 74 78 82 C70 90 60 95 50 97 C40 99 30 96 22 90 C14 84 8 76 4 66 C0 56 2 44 6 34 C10 24 18 16 28 10 C38 4 45 3 50 3 Z" />
-  </svg>
-
-  <img class="hello-img" src="assets/animated/hello.svg" alt="Hello" />
+<div class="splash-fade" (animationend)="onDone($event)">
+  <div class="splash-overlay">
+    <img class="hello-img" src="assets/animated/hello.svg" alt="Hello" />
+  </div>
 </div>
