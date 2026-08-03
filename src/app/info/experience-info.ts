@@ -25,7 +25,8 @@ export const experiences: Experience[] = [
     techStack: [
       { name: 'Java 21', image: 'assets/skill_icons/java.svg', level: 'Avancé' },
       { name: 'Spring Boot', image: 'assets/skill_icons/springboot.svg', level: 'Avancé' },
-      { name: 'PostgreSQL', image: 'assets/skill_icons/sql.svg', level: 'Maîtrise' },
+      { name: 'Hibernate', image: 'assets/skill_icons/hibernate.svg', level: 'Maîtrise' },
+      { name: 'PostgreSQL', image: 'assets/skill_icons/sql.svg', level: 'Avancé' },
       { name: 'Docker', image: 'assets/skill_icons/docker.svg', level: 'Maîtrise' },
       { name: 'Angular', image: 'assets/skill_icons/angular.svg', level: 'Avancé' },
       { name: 'TypeScript', image: 'assets/skill_icons/typescript.svg', level: 'Maîtrise' },
@@ -70,7 +71,7 @@ export const experiences: Experience[] = [
       { name: 'Python', image: 'assets/skill_icons/python.svg', level: 'Avancé' },
       { name: 'PyTorch', image: 'assets/skill_icons/pytorch.svg', level: 'Maîtrise' },
       { name: 'FastAPI', image: 'assets/skill_icons/fastapi.svg', level: 'Intermédiaire' },
-      { name: 'PostgreSQL', image: 'assets/skill_icons/sql.svg', level: 'Maîtrise' },
+      { name: 'PostgreSQL', image: 'assets/skill_icons/sql.svg', level: 'Avancé' },
       { name: 'JWT', image: 'assets/skill_icons/jwt.svg', level: 'Maîtrise' },
       { name: 'Gitlab CI/CD', image: 'assets/skill_icons/gitlab.svg', level: 'Avancé' },
 
