@@ -1,12 +1,12 @@
 import { Component, output } from '@angular/core';
 
 @Component({
-  selector: 'app-splash-screen',
+  selector: 'app-first-visit-overlay',
   standalone: true,
-  templateUrl: './splash-screen.html',
-  styleUrl: './splash-screen.css',
+  templateUrl: './first-visit-overlay.html',
+  styleUrl: './first-visit-overlay.css',
 })
-export class SplashScreen {
+export class FirstVisitOverlay {
   done = output<void>();
 
   private ended = false;

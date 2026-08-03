@@ -1,5 +1,5 @@
-@if (showSplash()) {
-  <app-splash-screen (done)="onSplashDone()" />
+@if (showOverlay()) {
+  <app-first-visit-overlay (done)="onOverlayDone()" />
 }
 
 <div class="flex flex-col bg-transparent items-center px-4 sm:px-10 pb-10 pt-24 gap-y-6">

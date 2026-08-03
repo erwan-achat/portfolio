@@ -3,20 +3,20 @@ import { RouterOutlet } from '@angular/router';
 import { routeAnimations } from './info/route-animations';
 import { Navbar } from "./components/navbar/navbar";
 import { Footer } from "./components/footer/footer";
-import { SplashScreen } from "./components/splash-screen/splash-screen";
+import { FirstVisitOverlay } from "./components/first-visit-overlay/first-visit-overlay";
 import { FaviconService } from './services/favicon/favicon';
 
-const SPLASH_LS_KEY = 'portfolio-splash-seen';
+const FIRST_VISIT_LS_KEY = 'portfolio-first-visit-seen';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, Footer, SplashScreen],
+  imports: [RouterOutlet, Navbar, Footer, FirstVisitOverlay],
   templateUrl: './app.html',
   styleUrl: './app.css',
   animations: [routeAnimations],
 })
 export class App {
-  protected readonly showSplash = signal(!localStorage.getItem(SPLASH_LS_KEY));
+  protected readonly showOverlay = signal(!localStorage.getItem(FIRST_VISIT_LS_KEY));
 
   constructor(private faviconService: FaviconService) {}
 
@@ -24,9 +24,9 @@ export class App {
     this.faviconService.initFaviconListener();
   }
 
-  onSplashDone() {
-    localStorage.setItem(SPLASH_LS_KEY, 'true');
-    this.showSplash.set(false);
+  onOverlayDone() {
+    localStorage.setItem(FIRST_VISIT_LS_KEY, 'true');
+    this.showOverlay.set(false);
   }
 
   prepareRoute(outlet: RouterOutlet) {
