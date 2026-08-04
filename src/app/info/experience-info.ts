@@ -1,6 +1,6 @@
 import { InjectionToken } from '@angular/core';
 
-export type SkillLevel = 'Intermédiaire' | 'Maîtrise' | 'Avancé';
+export type SkillLevel = 'intermediate' | 'mastery' | 'advanced';
 
 export interface SkillItem {
   name: string;
@@ -23,18 +23,18 @@ export const experiences: Experience[] = [
     title: 'Ingénieur fullstack (intégration IA)',
     context: `Stage de fin d'études - Takima, 2026`,
     techStack: [
-      { name: 'Java 21', image: 'assets/skill_icons/java.svg', level: 'Avancé' },
-      { name: 'Spring Boot', image: 'assets/skill_icons/springboot.svg', level: 'Avancé' },
-      { name: 'Hibernate', image: 'assets/skill_icons/hibernate.svg', level: 'Maîtrise' },
-      { name: 'PostgreSQL', image: 'assets/skill_icons/sql.svg', level: 'Avancé' },
-      { name: 'Docker', image: 'assets/skill_icons/docker.svg', level: 'Maîtrise' },
-      { name: 'Angular', image: 'assets/skill_icons/angular.svg', level: 'Avancé' },
-      { name: 'TypeScript', image: 'assets/skill_icons/typescript.svg', level: 'Maîtrise' },
-      { name: 'Gitlab CI/CD', image: 'assets/skill_icons/gitlab.svg', level: 'Avancé' },
-      { name: 'Kubernetes', image: 'assets/skill_icons/k8s.svg', level: 'Avancé' },
-      { name: 'Datadog', image: 'assets/skill_icons/datadog.svg', level: 'Intermédiaire' },
-      { name: 'Kafka', image: 'assets/skill_icons/kafka.svg', level: 'Intermédiaire' },
-      { name: 'OpenCode', image: 'assets/skill_icons/opencode.svg', level: 'Avancé' },
+      { name: 'Java 21', image: 'assets/skill_icons/java.svg', level: 'advanced' },
+      { name: 'Spring Boot', image: 'assets/skill_icons/springboot.svg', level: 'advanced' },
+      { name: 'Hibernate', image: 'assets/skill_icons/hibernate.svg', level: 'mastery' },
+      { name: 'PostgreSQL', image: 'assets/skill_icons/sql.svg', level: 'advanced' },
+      { name: 'Docker', image: 'assets/skill_icons/docker.svg', level: 'mastery' },
+      { name: 'Angular', image: 'assets/skill_icons/angular.svg', level: 'advanced' },
+      { name: 'TypeScript', image: 'assets/skill_icons/typescript.svg', level: 'mastery' },
+      { name: 'Gitlab CI/CD', image: 'assets/skill_icons/gitlab.svg', level: 'advanced' },
+      { name: 'Kubernetes', image: 'assets/skill_icons/k8s.svg', level: 'advanced' },
+      { name: 'Datadog', image: 'assets/skill_icons/datadog.svg', level: 'intermediate' },
+      { name: 'Kafka', image: 'assets/skill_icons/kafka.svg', level: 'intermediate' },
+      { name: 'OpenCode', image: 'assets/skill_icons/opencode.svg', level: 'advanced' },
     ],
     problem: `Durant 6 mois, j'ai travaillé en équipe sur Dossier d'Expertise, une application d'édition de CV qui tourne en production et permet aux commerciaux de Takima de répondre aux appels avec des profils de consultants.
     L'objectif était d'optimiser la gestion des profils des consultants pour fluidifier le staffing interne, tout en automatisant les tâches chronophages (reformatage, recherche) à l'aide de traitement par LLM.`,
@@ -50,8 +50,8 @@ export const experiences: Experience[] = [
     title: 'Challenge Kaggle en équipe : alignement vision-texte',
     context: 'Advanced Machine Learning, Sapienza Università di Roma - 2025',
     techStack: [
-      { name: 'Python', image: 'assets/skill_icons/python.svg', level: 'Avancé' },
-      { name: 'PyTorch', image: 'assets/skill_icons/pytorch.svg', level: 'Maîtrise' },
+      { name: 'Python', image: 'assets/skill_icons/python.svg', level: 'advanced' },
+      { name: 'PyTorch', image: 'assets/skill_icons/pytorch.svg', level: 'mastery' },
     ],
     image: 'assets/pictures/kaggle_challenge.png',
     problem: `"Model stitching" pour IA multimodale  : Comment aligner un encodeur de texte (BERT) avec un encodeur image (VAE) entraînés sur des données différentes, avec des représentations différentes dans des espaces latents de dimension différentes ?`,
@@ -68,12 +68,12 @@ export const experiences: Experience[] = [
     title: 'FaceGuard : un système biométrique de reconnaissance faciale',
     context: 'Biometric Systems, Sapienza Università di Roma - 2025',
     techStack: [
-      { name: 'Python', image: 'assets/skill_icons/python.svg', level: 'Avancé' },
-      { name: 'PyTorch', image: 'assets/skill_icons/pytorch.svg', level: 'Maîtrise' },
-      { name: 'FastAPI', image: 'assets/skill_icons/fastapi.svg', level: 'Intermédiaire' },
-      { name: 'PostgreSQL', image: 'assets/skill_icons/sql.svg', level: 'Avancé' },
-      { name: 'JWT', image: 'assets/skill_icons/jwt.svg', level: 'Maîtrise' },
-      { name: 'Gitlab CI/CD', image: 'assets/skill_icons/gitlab.svg', level: 'Avancé' },
+      { name: 'Python', image: 'assets/skill_icons/python.svg', level: 'advanced' },
+      { name: 'PyTorch', image: 'assets/skill_icons/pytorch.svg', level: 'mastery' },
+      { name: 'FastAPI', image: 'assets/skill_icons/fastapi.svg', level: 'intermediate' },
+      { name: 'PostgreSQL', image: 'assets/skill_icons/sql.svg', level: 'advanced' },
+      { name: 'JWT', image: 'assets/skill_icons/jwt.svg', level: 'mastery' },
+      { name: 'Gitlab CI/CD', image: 'assets/skill_icons/gitlab.svg', level: 'advanced' },
 
 
     ],
@@ -89,10 +89,10 @@ export const experiences: Experience[] = [
     title: 'Ingénieur recherche',
     context: 'Stage de recherche en visualisation de données- Inria, 2025',
     techStack: [
-      { name: 'C++', image: 'assets/skill_icons/cpp.svg', level: 'Maîtrise' },
-      { name: 'Arduino', image: 'assets/skill_icons/arduino.svg', level: 'Intermédiaire' },
-      { name: 'React Vite', image: 'assets/skill_icons/react.svg', level: 'Avancé' },
-      { name: 'Blender', image: 'assets/skill_icons/blender.svg', level: 'Maîtrise' },
+      { name: 'C++', image: 'assets/skill_icons/cpp.svg', level: 'mastery' },
+      { name: 'Arduino', image: 'assets/skill_icons/arduino.svg', level: 'intermediate' },
+      { name: 'React Vite', image: 'assets/skill_icons/react.svg', level: 'advanced' },
+      { name: 'Blender', image: 'assets/skill_icons/blender.svg', level: 'mastery' },
     ],
     problem: `Récupérer et visualiser le niveau sonore et la direction d'incidence d'une source sonore sur un écran non-planaire.`,
     solution: [

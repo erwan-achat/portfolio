@@ -15,12 +15,12 @@
   </div>
 
   <div class="card-section">
-    <h4 class="card-label">Problématique</h4>
+    <h4 class="card-label">{{ languageService.ui().problem }}</h4>
     <p class="card-text">{{ item.problem }}</p>
   </div>
 
   <div class="card-section">
-    <h4 class="card-label">Solution</h4>
+    <h4 class="card-label">{{ languageService.ui().solution }}</h4>
     <ul class="solution-list">
       @for (point of item.solution; track $index) {
         <li class="card-text">{{ point }}</li>

@@ -3,16 +3,18 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { fromEvent } from 'rxjs';
 import { auditTime } from 'rxjs/operators';
-import { NAV_SECTIONS } from '../../info/section-info';
+import { LanguageService } from '../../info/language-info';
+import { LanguageSelector } from '../language-selector/language-selector';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, LanguageSelector],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
 export class Navbar {
-  protected readonly navSections = inject(NAV_SECTIONS);
+  protected readonly languageService = inject(LanguageService);
+  protected readonly navSections = this.languageService.navSections;
 
   private scaleX = signal(1);
   private scaleY = signal(1);

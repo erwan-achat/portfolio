@@ -1,4 +1,5 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
+import { LanguageService } from '../../info/language-info';
 
 const LS_PREFIX = 'contact-form-';
 
@@ -9,6 +10,7 @@ const LS_PREFIX = 'contact-form-';
   styleUrl: './contact-form.css',
 })
 export class ContactForm {
+  protected readonly languageService = inject(LanguageService);
   name = signal(localStorage.getItem(LS_PREFIX + 'name') ?? '');
   email = signal(localStorage.getItem(LS_PREFIX + 'email') ?? '');
   message = signal(localStorage.getItem(LS_PREFIX + 'message') ?? '');
@@ -51,15 +53,15 @@ export class ContactForm {
     const issues: string[] = [];
 
     if (!this.nameIsValid(this.name())) {
-      issues.push('votre nom');
+      issues.push(this.languageService.ui().name.toLowerCase());
     }
     if (!this.emailIsValid(this.email())) {
-      issues.push('un email valide');
+      issues.push(this.languageService.ui().email.toLowerCase());
     }
     if (!this.messageIsValid(this.message())) {
-      issues.push('votre message');
+      issues.push(this.languageService.ui().message.toLowerCase());
     }
 
-    return `Il me faut encore : ${issues.join(', ')}.`;
+    return this.languageService.ui().missingFields(issues);
   });
 }

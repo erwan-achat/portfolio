@@ -9,19 +9,19 @@
           class="w-32 aspect-square object-cover rounded-sm"
           width="128"
           height="128"
-          alt="Portrait of {{ personalInfo.firstName + ` ` + personalInfo.lastName }}"
+          alt="Portrait of {{ personalInfo().firstName + ` ` + personalInfo().lastName }}"
         />
 
         <!-- second col: textual information -->
         <div class="">
           <!-- profile -->
           <h1 class="font-semibold text-accent-light text-lg">
-            {{ personalInfo.firstName + ` ` + personalInfo.lastName }}
+            {{ personalInfo().firstName + ` ` + personalInfo().lastName }}
           </h1>
-          <p>{{ personalInfo.title }}</p>
+          <p>{{ personalInfo().title }}</p>
 
           <!-- location -->
-          <p>📍 {{ personalInfo.location }}</p>
+          <p>📍 {{ personalInfo().location }}</p>
         </div>
       </div>
     </div>

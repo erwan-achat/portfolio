@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { PERSONAL_INFO } from '../../info/personal-info';
+import { LanguageService } from '../../info/language-info';
 import {Icon} from "../icon/icon";
 
 @Component({
@@ -9,5 +9,5 @@ import {Icon} from "../icon/icon";
   styleUrl: './icon-set.css',
 })
 export class IconSet {
-  protected readonly personalInfo = inject(PERSONAL_INFO);
+  protected readonly personalInfo = inject(LanguageService).personalInfo;
 }

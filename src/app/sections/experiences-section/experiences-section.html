@@ -1,4 +1,4 @@
 <div class="flex flex-col gap-5">
-<h1>Découvrez les projets auxquels j'ai contribué</h1>
-<app-carousel [items]="experiences" />
+<h1>{{ languageService.ui().projects }}</h1>
+<app-carousel [items]="experiences()" />
 </div>
