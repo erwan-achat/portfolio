@@ -23,6 +23,8 @@ describe('LanguageService', () => {
 
     expect(localStorage.getItem('portfolio-language')).toBe('en');
     expect(document.documentElement.lang).toBe('en');
-    expect(service.navSections()[0].label).toBe('Profile');
+    expect(service.navSections()[0].label).toBe('About');
+    expect(service.timelineSections()).toHaveLength(4);
+    expect(service.experiences()[3].link?.label).toBe('Reference letter');
   });
 });

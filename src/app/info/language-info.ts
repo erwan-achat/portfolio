@@ -109,7 +109,7 @@ const ENGLISH_TIMELINE: Record<number, Pick<TimelineSection, 'title' | 'summary'
   3: { title: 'Research Engineer', summary: 'Inria - Data visualization research internship (5 months)' },
 };
 
-const ENGLISH_EXPERIENCES: Record<number, Pick<Experience, 'title' | 'context' | 'problem' | 'solution'>> = {
+const ENGLISH_EXPERIENCES: Record<number, Pick<Experience, 'title' | 'context' | 'problem' | 'solution' | 'link'>> = {
   0: {
     title: 'Fullstack Engineer (AI integration)', context: 'Final-year internship - Takima, 2026',
     problem: `For six months, I worked as part of a team on Dossier d'Expertise, a production resume-editing application that helps Takima sales teams answer calls for consultants. The goal was to improve consultant profile management while automating time-consuming tasks such as formatting and searching with LLM processing.`,
@@ -129,6 +129,7 @@ const ENGLISH_EXPERIENCES: Record<number, Pick<Experience, 'title' | 'context' |
     title: 'Research Engineer', context: 'Data visualization research internship - Inria, 2025',
     problem: 'Retrieve and visualize the sound level and direction of incidence of a sound source on a non-planar screen.',
     solution: ['Processed signals with FFT to calculate sound levels from low-cost analog microphones.', 'Designed a TDoA algorithm to estimate sound direction and calculate uncertainties.', 'Developed real-time data visualizations transmitted through WebSocket.', 'Simulated the visualizations in 3D with React Three Fiber and Blender on a virtual cylindrical screen.', 'Worked exclusively in English in an international setting'],
+    link: { label: 'Reference letter', url: 'assets/pdfs/reference_letter_inria.pdf' },
   },
 };
 
@@ -145,7 +146,7 @@ export class LanguageService {
   readonly ui = computed(() => UI_TRANSLATIONS[this.language()]);
   readonly personalInfo = computed(() => ({ ...this.basePersonalInfo, ...(this.language() === 'en' ? ENGLISH_PERSONAL_INFO : {}) }));
   readonly navSections = computed<NavSection[]>(() => this.language() === 'en'
-    ? [{ label: 'Profile', path: '/home' }, { label: 'Experience', path: '/experiences' }, { label: 'Contact', path: '/contact' }]
+    ? [{ label: 'About', path: '/home' }, { label: 'Experience', path: '/experiences' }, { label: 'Contact', path: '/contact' }]
     : this.baseNavSections);
   readonly timelineSections = computed(() => this.baseTimelineSections.map((section, index) => ({
     ...section,
