@@ -37,3 +37,15 @@
   color: rgba(255, 255, 255, 1);
   background: rgba(255, 255, 255, 0.08);
 }
+
+.translation-button {
+  transition: transform 200ms ease-out;
+}
+
+.translation-button:hover {
+  transform: scale(1.1);
+}
+
+.translation-button:active {
+    transform: scale(0.95);
+}
