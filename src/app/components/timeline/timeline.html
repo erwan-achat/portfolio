@@ -1,5 +1,5 @@
 <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-  @for (section of sections; track section.title; let i = $index, first = $first, last = $last) {
+  @for (section of sections(); track $index; let i = $index, first = $first, last = $last) {
     <li>
       @if (!first) {
         <hr />

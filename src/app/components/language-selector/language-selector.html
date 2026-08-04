@@ -1,0 +1,29 @@
+<div class="relative">
+  <button
+    type="button"
+    class="rounded-full px-3 py-1 opacity-70 transition hover:opacity-100"
+    [attr.aria-expanded]="isOpen"
+    aria-haspopup="listbox"
+    [attr.aria-label]="languageService.ui().languageMenuLabel"
+    (click)="toggle()"
+  >
+    {{ languageService.ui().languageButton }}
+  </button>
+
+  @if (isOpen) {
+    <ul class="absolute right-0 top-full z-10 mt-2 min-w-32 rounded-xl border border-white/20 bg-zinc-900/95 p-1 shadow-xl" role="listbox">
+      @for (language of languageService.languages; track language.code) {
+        <li role="option" [attr.aria-selected]="language.code === languageService.language()">
+          <button
+            type="button"
+            class="w-full rounded-lg px-3 py-2 text-left transition hover:bg-white/10"
+            [class.text-accent-light]="language.code === languageService.language()"
+            (click)="selectLanguage(language.code)"
+          >
+            {{ language.nativeName }}
+          </button>
+        </li>
+      }
+    </ul>
+  }
+</div>

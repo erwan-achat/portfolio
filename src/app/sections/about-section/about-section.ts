@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { PersonalCard } from '../../components/personal-card/personal-card';
 import { Timeline } from '../../components/timeline/timeline';
-import { PERSONAL_INFO } from '../../info/personal-info';
+import { LanguageService } from '../../info/language-info';
 import { IconSet } from "../../components/icon-set/icon-set";
 
 @Component({
@@ -11,11 +11,6 @@ import { IconSet } from "../../components/icon-set/icon-set";
   styleUrl: './about-section.css',
 })
 export class AboutSection {
-    protected readonly focusPoints = [
-    'Navigation simple et directe',
-    'Contenus clairs et hiérarchisés',
-    'Base Angular facile à faire évoluer',
-  ];
-
-  protected readonly personalInfo = inject(PERSONAL_INFO);
+  protected readonly languageService = inject(LanguageService);
+  protected readonly personalInfo = this.languageService.personalInfo;
 }

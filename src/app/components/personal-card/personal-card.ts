@@ -1,6 +1,6 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { PERSONAL_INFO } from '../../info/personal-info';
+import { LanguageService } from '../../info/language-info';
 
 @Component({
   selector: 'app-personal-card',
@@ -9,5 +9,5 @@ import { PERSONAL_INFO } from '../../info/personal-info';
   styleUrl: './personal-card.css',
 })
 export class PersonalCard {
-  protected readonly personalInfo = inject(PERSONAL_INFO);
+  protected readonly personalInfo = inject(LanguageService).personalInfo;
 }

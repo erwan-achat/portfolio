@@ -2,6 +2,7 @@ import { Component, Input, signal, computed, inject, DestroyRef, ElementRef, Aft
 import { NgStyle } from '@angular/common';
 import { CarouselItem } from '../carousel-item/carousel-item';
 import { Experience } from '../../info/experience-info';
+import { LanguageService } from '../../info/language-info';
 
 @Component({
   selector: 'app-carousel',
@@ -22,6 +23,7 @@ export class Carousel implements AfterViewInit {
   private resizeObserver: ResizeObserver | undefined;
   private el = inject(ElementRef<HTMLElement>);
   private zone = inject(NgZone);
+  protected readonly languageService = inject(LanguageService);
 
   constructor() {
     const destroyRef = inject(DestroyRef);

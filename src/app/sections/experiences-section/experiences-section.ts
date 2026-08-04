@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { EXPERIENCES, Experience } from '../../info/experience-info';
+import { LanguageService } from '../../info/language-info';
 import { Carousel } from '../../components/carousel/carousel';
 
 @Component({
@@ -9,5 +9,6 @@ import { Carousel } from '../../components/carousel/carousel';
   styleUrl: './experiences-section.css',
 })
 export class ExperiencesSection {
-  protected readonly experiences: Experience[] = inject(EXPERIENCES);
+  protected readonly languageService = inject(LanguageService);
+  protected readonly experiences = this.languageService.experiences;
 }

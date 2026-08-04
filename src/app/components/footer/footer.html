@@ -1,18 +1,18 @@
 <footer class="footer sm:footer-horizontal bg-transparent text-neutral-content p-10">
   <aside>
-    <a [href]="personalInfo.github" target="_blank" rel="noopener noreferrer" class="hover:opacity-60 transition-opacity duration-300">
+    <a [href]="personalInfo().github" target="_blank" rel="noopener noreferrer" class="hover:opacity-60 transition-opacity duration-300">
       <img [ngSrc]="'assets/icons/github_white.svg'" width="64" height="64" alt="Github" class="w-16 aspect-square object-cover" />
     </a>
     <p class="text-white!">
       Erwan Achat, 2026
       <br />
-      Portfolio façonné avec Angular 22
+       {{ languageService.ui().portfolioBuiltWith }}
     </p>
   </aside>
   <nav>
-    <h6 class="footer-title">Sections</h6>
+     <h6 class="footer-title">{{ languageService.ui().footerSections }}</h6>
     <div class="grid grid-flow-col gap-4">
-      @for (section of navSections; track section.path) {
+      @for (section of navSections(); track section.path) {
         <a class="hover:underline" [routerLink]="section.path">
           {{ section.label }}
         </a>

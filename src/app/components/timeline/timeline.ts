@@ -1,7 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 
-import { TIMELINE_SECTIONS } from '../../info/timeline-info';
+import { LanguageService } from '../../info/language-info';
 import { ScrollInDirective } from '../../directives/scroll-in.directive';
 
 @Component({
@@ -11,5 +11,6 @@ import { ScrollInDirective } from '../../directives/scroll-in.directive';
   styleUrl: './timeline.css',
 })
 export class Timeline {
-  protected readonly sections = inject(TIMELINE_SECTIONS);
+  private readonly languageService = inject(LanguageService);
+  protected readonly sections = computed(() => this.languageService.timelineSections());
 }
