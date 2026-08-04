@@ -104,9 +104,31 @@ const ENGLISH_PERSONAL_INFO: Partial<PersonalInfo> = {
 
 const ENGLISH_TIMELINE: Record<number, Pick<TimelineSection, 'title' | 'summary'>> = {
   0: { title: 'Computer Engineering and Mathematical Engineering Degree', summary: 'Polytech Paris-Saclay' },
-  1: { title: 'Fullstack Engineer', summary: 'Takima - Software development and consulting internship (6 months)' },
-  2: { title: 'Erasmus exchange semester', summary: 'Sapienza Università di Roma - Computer Science Master' },
-  3: { title: 'Research Engineer', summary: 'Inria - Data visualization research internship (5 months)' },
+  1: {
+    title: 'Fullstack Engineer',
+    summary: `Takima - Internship in software development and consulting (6 months)
+
+    As part of my final-year internship, I joined an internal development team at Takima (IT services company) to integrate AI tools into a production web application, with a consultant mindset.
+
+    I worked in an agile environment, collaborating with Takima's Operations Department and the sales team to design solutions that meet their needs and improve the efficiency of their internal processes.
+
+    `,
+  },
+  2: {
+    title: 'Erasmus exchange semester',
+    summary: `Sapienza Università di Roma - Computer Science Master
+
+    As all roads lead to Rome... I had the opportunity to study computer science for a semester at Sapienza, with an in-depth focus on modern AI techniques. This experience allowed me to discover an international academic environment as well as a rich culture unique to Italy.
+
+    I took and passed the following courses: Advanced Machine Learning, Quantum Computing, Biometric Systems, Automatic Verification of Intelligent Systems (Reinforcement Learning), Statistics`,
+  },
+  3: {
+    title: 'Research Engineer',
+    summary: `Inria - Data visualization research internship (5 months)
+
+    I joined Inria's Aviz team, specialized in data visualization, to contribute to a research project aimed at exploring new visualization methods for non-flat screens (curved, spherical, cylindrical).
+    `,
+  },
 };
 
 const ENGLISH_EXPERIENCES: Record<number, Pick<Experience, 'title' | 'context' | 'problem' | 'solution' | 'link'>> = {
