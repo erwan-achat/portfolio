@@ -41,6 +41,8 @@ export class Carousel implements AfterViewInit {
       this.zone.run(() => this.slideWidth.set(width));
     };
     measure();
+    if (typeof ResizeObserver === 'undefined') return;
+
     this.resizeObserver = new ResizeObserver(measure);
     this.resizeObserver.observe(this.el.nativeElement);
   }

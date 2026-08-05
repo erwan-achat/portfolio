@@ -8,6 +8,11 @@ export class ScrollInDirective implements OnInit, OnDestroy {
   private observer?: IntersectionObserver;
 
   ngOnInit(): void {
+    if (typeof IntersectionObserver === 'undefined') {
+      this.element.nativeElement.classList.add('visible');
+      return;
+    }
+
     this.observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
