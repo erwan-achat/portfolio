@@ -1,0 +1,21 @@
+<div [class]="'medusae-root ' + className" aria-hidden="true">
+  <ngt-canvas
+    class="medusae-canvas"
+    [camera]="camera"
+    [scene]="scene"
+    [gl]="gl"
+    [projectContent]="true"
+    [dpr]="[1, 2]"
+  >
+    <ngt-instanced-mesh [count]="count" (appended)="onMeshAppended($event)" (beforeRender)="onBeforeRender($event)">
+      <ngt-plane-geometry [args]="[1, 1]" />
+      <ngt-shader-material
+        [uniforms]="uniforms"
+        [vertexShader]="vertexShader"
+        [fragmentShader]="fragmentShader"
+        [transparent]="true"
+        [depthWrite]="false"
+      />
+    </ngt-instanced-mesh>
+  </ngt-canvas>
+</div>

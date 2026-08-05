@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.medusae-root,
+.medusae-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.medusae-root {
+  isolation: isolate;
+}
+
+.medusae-canvas {
+  opacity: 0.9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .medusae-canvas {
+    opacity: 0.55;
+  }
+}
