@@ -5,12 +5,13 @@ import { Navbar } from "./components/navbar/navbar";
 import { Footer } from "./components/footer/footer";
 import { FirstVisitOverlay } from "./components/first-visit-overlay/first-visit-overlay";
 import { FaviconService } from './services/favicon/favicon';
+import { Medusae } from './components/medusae/medusae';
 
 const FIRST_VISIT_LS_KEY = 'portfolio-first-visit-seen';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, Footer, FirstVisitOverlay],
+  imports: [RouterOutlet, Navbar, Footer, FirstVisitOverlay, Medusae],
   templateUrl: './app.html',
   styleUrl: './app.css',
   animations: [routeAnimations],

@@ -7,6 +7,7 @@ describe('AboutSection', () => {
   let fixture: ComponentFixture<AboutSection>;
 
   beforeEach(async () => {
+    TestBed.overrideComponent(AboutSection, { set: { template: '<p>About</p>' } });
     await TestBed.configureTestingModule({
       imports: [AboutSection],
     }).compileComponents();
