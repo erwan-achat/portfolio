@@ -6,6 +6,8 @@ Structuré en sections navigables avec animations avec des composants réutilisa
 
 Libre à vous de réutiliser ce projet comme un template !
 
+Animation Medusae inspired by Google's Antigravity website.
+
 ```
 src/
 └── app/

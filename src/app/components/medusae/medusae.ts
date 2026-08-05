@@ -141,9 +141,9 @@ const FRAGMENT_SHADER = `
     float time = uTime * 1.2;
     float p1 = sin(vPos.x * 0.8 + time);
     float p2 = sin(vPos.y * 0.8 + time * 0.8 + p1);
-    vec3 active = mix(uParticleColorOne, uParticleColorTwo, p1 * 0.5 + 0.5);
-    active = mix(active, uParticleColorThree, p2 * 0.5 + 0.5);
-    vec3 color = mix(uParticleColorBase, active, smoothstep(0.1, 0.8, vSize));
+    vec3 blendedColor = mix(uParticleColorOne, uParticleColorTwo, p1 * 0.5 + 0.5);
+    blendedColor = mix(blendedColor, uParticleColorThree, p2 * 0.5 + 0.5);
+    vec3 color = mix(uParticleColorBase, blendedColor, smoothstep(0.1, 0.8, vSize));
     gl_FragColor = vec4(color, alpha * mix(0.4, 0.95, vSize));
   }
 `;
