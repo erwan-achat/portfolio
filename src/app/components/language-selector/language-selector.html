@@ -1,10 +1,11 @@
 <div class="relative">
   <button
     type="button"
-    class="group size-10 md:size-[3.5rem] rounded-full backdrop-blur-xl brightness-125 border border-white/20 flex items-center justify-center cursor-pointer translation-button"
+    class="group size-10 md:size-[3.5rem] rounded-full backdrop-blur-xl brightness-125 border border-white/20 flex items-center justify-center cursor-pointer translation-button focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80"
     id="language-trigger"
     [attr.aria-expanded]="isOpen"
     aria-haspopup="listbox"
+    aria-controls="language-menu"
     [attr.aria-label]="languageService.ui().languageMenuLabel"
     (click)="toggle()"
   >
@@ -18,6 +19,7 @@
 
   @if (isOpen) {
     <ul
+      id="language-menu"
       class="language-dropdown"
       role="listbox"
       [attr.aria-label]="languageService.ui().languageMenuLabel"

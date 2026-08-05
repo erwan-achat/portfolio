@@ -14,3 +14,10 @@
 .navbar-body:active {
     transform: scale(0.97);
 }
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar-squash,
+    .navbar-body {
+        transition: none;
+    }
+}

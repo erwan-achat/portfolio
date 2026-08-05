@@ -1,9 +1,9 @@
 <div class="navbar-squash fixed top-4 left-1/2 z-50 flex items-center gap-2 md:gap-3"
      [style.transform]="transform()">
-  <div class="navbar-body flex items-center justify-center gap-1.5 md:gap-2 brightness-120 rounded-full backdrop-blur-xl px-3 py-2 md:px-6 md:py-3 text-sm md:text-lg border border-white/20">
+  <div class="navbar-body flex items-center justify-center gap-1.5 md:gap-2 brightness-120 rounded-full backdrop-blur-xl px-3 py-2.5 md:px-6 md:py-3 text-sm md:text-lg border border-white/20">
     @for (item of navSections(); track item.path) {
         <a
-          class="px-2 md:px-4 py-1 opacity-50 hover:opacity-100 transition duration-400 ease-in-out text-center whitespace-nowrap"
+          class="px-2 md:px-4 py-1.5 md:py-1 opacity-50 hover:opacity-100 transition duration-400 ease-in-out text-center whitespace-nowrap focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80 rounded-full"
           [routerLink]="item.path"
           routerLinkActive="opacity-100"
           [routerLinkActiveOptions]="{ exact: true }"
