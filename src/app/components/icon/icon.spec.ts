@@ -13,6 +13,7 @@ describe('Icon', () => {
 
     fixture = TestBed.createComponent(Icon);
     component = fixture.componentInstance;
+    component.src = 'test.svg';
     await fixture.whenStable();
   });
 
