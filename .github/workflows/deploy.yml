@@ -62,6 +62,9 @@ jobs:
       - name: Build Angular app
         run: npm run build -- --configuration production --base-href=/portfolio/
 
+      - name: Create SPA fallback (404.html)
+        run: cp dist/portfolio/browser/index.html dist/portfolio/browser/404.html
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
