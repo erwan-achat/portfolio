@@ -6,7 +6,8 @@ Structuré en sections navigables avec animations avec des composants réutilisa
 
 Libre à vous de réutiliser ce projet comme un template !
 
-Animation Medusae inspired by Google's Antigravity website.
+Charmante animation interactive de méduse en arrière plan, entièrement inspirée par le site de présentation d'Antigravity, ré-implémentée avec Angular Three :
+[voir le site d'Antigravity](https://antigravity.google/)
 
 ```
 src/
