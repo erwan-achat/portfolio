@@ -1,5 +1,7 @@
 # Portfolio web
 
+![Demo](./public/assets/gifs/portfolio_demo.gif)
+
 Portfolio personnel développé avec Angular 22 en standalone, Typescript 6, Tailwind 4 et DaisyUI 5.
 
 Structuré en sections navigables avec animations avec des composants réutilisables et personnalisables avec vos informations personnelles.
